@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .news-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .news-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .news-details {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+    <title>News Page</title>
+</head>
+
+<body>
+
+    <div class="single-info row">
+        <div class="col-6 col-md-12" >
+            <div class="news-title">{{newsDetails.news_title | safe}}</div>
+            <div class="news-details">{{newsDetails.news_desc | safe}}</div>
+        </div>
+        <div class="col-6">
+            <img src="/media/{{newsDetails.img}}" class="img-fluid"/>
+            
+        </div>
+
+        
+    </div>
+
+</body>
+
+</html>
